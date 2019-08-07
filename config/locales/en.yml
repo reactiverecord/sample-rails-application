@@ -1,0 +1,55 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+en:
+  activerecord:
+    attributes:
+      user:
+        image: Photo
+        email: E-mail address
+        level: User type
+  errors:
+    format: "%{message}"
+    messages:
+      blank: "%{attribute_with_article} is required."
+      invalid: "Please use a valid %{attribute_downcase}."
+      too_short: "The minimum %{attribute_downcase} length is %{count}."
+      too_long: "The maximum %{attribute_downcase} length is %{count}."
+      confirmation: "The %{attribute_downcase} confirmation doesn't match."
+      required: "%{attribute_with_article} is required."
+      inclusion: "This %{attribute_downcase} may not be used."
+      exclusion: "This %{attribute_downcase} may not be used."
+      accepted: "%{attribute} must be accepted."
+      empty: "%{attribute} can't be empty."
+      wrong_length: "%{attribute} is the wrong length (should be %{count} characters)."
+      not_a_number: "%{attribute} must be a number."
+      not_an_integer: "%{attribute} must be an integer."
+      greater_than: "%{attribute} must be greater than %{count}."
+      greater_than_or_equal_to: "%{attribute} must be greater than or equal to %{count}."
+      equal_to: "%{attribute} must be equal to %{count}."
+      less_than: "%{attribute} must be less than %{count}."
+      less_than_or_equal_to: "%{attribute} must be less than or equal to %{count}."
+      odd: "%{attribute} must be an odd number."
+      even: "%{attribute} must be an even number."
+      taken: "This %{attribute_downcase} may not be used."
+      email: Please enter a valid e-mail address.
+      # interview:
+      #   email:
+      #     blank: Please enter your e-mail address!

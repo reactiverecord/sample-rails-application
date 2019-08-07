@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
+    <title><%= @title  %></title>
+    <%= head_tags_html %>
+  </head>
+  <body>
+    <%= body_open_html %><%= yield %>
+    <%= body_close_html %>
+  </body>
+</html>

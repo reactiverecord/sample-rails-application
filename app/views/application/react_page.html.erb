@@ -1,0 +1,13 @@
+<% if defined?(prerender) and prerender %>
+<!DOCTYPE html><%= react_component(
+                     "Root",
+                     {
+                       location: request.fullpath,
+                       INITIAL_STATE: @INITIAL_STATE,
+                       headTags: head_tags,
+                       bodyTags: body_tags
+                     },
+                     prerender: :static
+                   ).sub(/<[^>]*>/,"")
+                   .chomp("</div>")
+                   .html_safe %><% else %><%= react_component(@react_class || "App", { INITIAL_STATE: @INITIAL_STATE }) %><% end %>

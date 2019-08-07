@@ -1,0 +1,31 @@
+import { Validator } from "reactiverecord"
+
+Validator.validators.remote.email = function(
+  value,
+  options,
+  form,
+  attribute,
+  callback
+) {
+  const message = <%= EMAIL_REGEX.to_json %>.test(value || "") ? null : options.message
+  callback(message)
+}
+
+Validator.validators.remote.uniqueness = async function(value,options,form,attribute,callback) {
+  if (value) {
+    const response = await fetch(`/api/employer-schedules/email_exists?email=${value}`)
+    if (response.status === 404) {
+      return callback()
+    }
+    return callback(options.message)
+  }
+}
+
+<% Dir["#{Rails.root}/app/javascript/models/*.js"].each do |filename| %>
+  <% basename = File.basename(filename, ".js") %>
+  import <%= basename %> from "models/<%= basename %>"
+  <% if model_class = basename.constantize rescue nil %>
+    <% validation_hash = model_class.new.client_side_validation_hash(true) %>
+    <%= basename %>.validations = <%= JSON.generate(validation_hash) %>
+  <% end %>
+<% end %>

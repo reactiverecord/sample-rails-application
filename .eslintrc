@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "plugin:react-app/recommended"
+  ],
+  "rules": {
+    "react-app/react/jsx-pascal-case": 0,
+    "radix": 0,
+    "no-unused-vars": ["error", { "args": "all" }],
+    "react/jsx-filename-extension": 0,
+    "quotes": [2, "double"],
+    "semi": [2, "never"],
+    "curly": [2, "all"]
+  },
+  "globals": {
+    "FB": true
+  }
+}

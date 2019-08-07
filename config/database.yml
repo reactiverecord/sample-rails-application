@@ -1,0 +1,14 @@
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/reactive_development.sqlite3
+test:
+  <<: *default
+  database: db/reactive_test.sqlite3
+
+production:
+  <<: *default
