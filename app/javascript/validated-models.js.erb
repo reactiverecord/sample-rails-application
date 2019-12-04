@@ -1,6 +1,6 @@
 import { Validator } from "reactiverecord"
 
-Validator.validators.remote.email = function(
+Validator.validators.async.email = function(
   value,
   options,
   form,
@@ -11,7 +11,7 @@ Validator.validators.remote.email = function(
   callback(message)
 }
 
-Validator.validators.remote.uniqueness = async function(value,options,form,attribute,callback) {
+Validator.validators.async.uniqueness = async function(value,options,form,attribute,callback) {
   if (value) {
     const response = await fetch(`/api/employer-schedules/email_exists?email=${value}`)
     if (response.status === 404) {

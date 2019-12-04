@@ -5127,10 +5127,10 @@ react_ujs@^2.4.4:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/react_ujs/-/react_ujs-2.4.4.tgz#49bac535d24024a96b0a35d7514d18188aea42bc"
 
-reactiverecord@^0.7.0:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/reactiverecord/-/reactiverecord-0.7.2.tgz#e4e8cdea0a10f435bd5e36d7ac50775a90ae2a48"
-  integrity sha512-cSxkevfD7uolsTs3hXJq2YcF1BXWxMKyjUv9kDajz7P41zciB1nBfFtH6nn0No7evmJeOMKEns2904Qn21DYZg==
+reactiverecord@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/reactiverecord/-/reactiverecord-0.8.1.tgz#83c0bb1e298a18a97be4874be4fdc695518156e4"
+  integrity sha512-6oD2W686BcESJZoI8WEaXbPh9CurVg0BQ6aURO60HbIM/7PcHhKiboMZ7mx49kTxZTFLMJZOpWJNVFHcUkeR/g==
 
 read-cache@^1.0.0:
   version "1.0.0"

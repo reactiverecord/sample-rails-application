@@ -32,7 +32,10 @@ babelLoader.use = {
       "stage-0"
     ],
     plugins: [
-      ["transform-runtime"]
+      [
+        "transform-es2015-modules-commonjs",
+        "transform-runtime"
+      ]
     ]
   }
 }
